@@ -1,4 +1,21 @@
-.Result {
-  background: springgreen;
-  height: 100px;
+.card {
+  margin-left: 53%;
+  margin-top: 15%;
+  width: 400px;
+}
+.container {
+  margin-top: -750px;
+  background: whitesmoke;
+  border: solid 2px black;
+  display: grid;
+  grid-template-columns: repeat(2, 35%);
+  height: auto;
+}
+
+h3 {
+  width: 400px;
+  height: auto;
+}
+h3 {
+  margin-top: 15px;
 }
