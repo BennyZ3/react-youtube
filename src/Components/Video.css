@@ -1,4 +1,12 @@
+.Video-container {
+  background: whitesmoke;
+  height: 900px;
+  width: 1600px;
+  margin-top: -750px;
+}
 .Video {
-  background: orange;
-  height: 600px;
+  margin-left: 18%;
+  margin-top: 10%;
+  width: 60%;
+  height: 550px;
 }
