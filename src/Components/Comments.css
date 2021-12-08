@@ -1,0 +1,18 @@
+.commentSection {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.commentSection form {
+  display: grid;
+  width: 70%;
+  grid-template-columns: 1fr;
+  padding-left: 7.5%;
+  text-align: left;
+}
+
+.commentSection button {
+  width: 100px;
+  margin: 15px;
+}

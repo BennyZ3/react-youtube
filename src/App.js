@@ -23,6 +23,7 @@ class App extends Component {
     )
       .then((res) => res.json())
       .then((json) => {
+        console.log(json);
         this.setState({
           data: json,
           DataIsLoaded: true,
@@ -59,4 +60,3 @@ class App extends Component {
 }
 
 export default App;
-// key=AIzaSyAxV3nD9zKlpQ720FWFQaNnK3mynXp6W0Q`
