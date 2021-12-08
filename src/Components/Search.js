@@ -19,7 +19,7 @@ class Search extends Component {
 
   render() {
     const { search } = this.state;
-    const newURL = '/videos?search_query=' + search.split(' ').join('+');
+    const newURL = '/videos/search_query=' + search.split(' ').join('+');
     return (
       <div className="Search">
         <form>
