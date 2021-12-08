@@ -8,13 +8,12 @@ import Search from './Components/Search';
 import Video from './Components/Video';
 
 class App extends Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     data: '',
-  //     DataIsLoaded: false,
-  //   };
-  // }
+  constructor() {
+    super();
+    this.state = {
+      data: '',
+    };
+  }
 
   // getData() {
   //   fetch(
@@ -30,6 +29,12 @@ class App extends Component {
   //     });
   // }
 
+  // updateData = (newData) => {
+  //   this.setState({
+  //     data: newData,
+  //   });
+  // };
+
   render() {
     // const { DataIsLoaded, data } = this.state;
     // console.log(data);
@@ -41,6 +46,7 @@ class App extends Component {
     //     </div>
     //   );
 
+    const { data } = this.state;
     return (
       <div className="App">
         <Nav />
@@ -48,7 +54,7 @@ class App extends Component {
 
         <main>
           <Routes>
-            <Route path="/videos?search_query=:search" element={<Result />} />
+            <Route path="/videos/search_query=:search" element={<Result />} />
             <Route path="/videos/:id" element={<Video />} />
             <Route path="/about" element={<About />} />
           </Routes>
