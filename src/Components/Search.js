@@ -1,13 +1,17 @@
+
 import "./Search.css";
 import { Component } from "react";
 import { Navigate, Link } from "react-router-dom";
+
 
 class Search extends Component {
   constructor() {
     super();
     this.state = {
       redirect: false,
+
       search: "",
+
     };
   }
 
@@ -20,12 +24,14 @@ class Search extends Component {
   render() {
     const { search } = this.state;
 
+
     const newURL = search && "/videos/search_query=" + search;
 
     return (
       <div className="Search">
         <form>
           <input type="text" name="searchBar" id="searchBar" onChange={this.handleSearch} />
+
           <Link to={newURL}>
             <button>Search</button>
           </Link>
@@ -36,4 +42,4 @@ class Search extends Component {
 }
 
 export default Search;
-// .split(" ").join("+")
+
