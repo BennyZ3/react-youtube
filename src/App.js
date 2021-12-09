@@ -4,7 +4,6 @@ import { Route, Routes } from 'react-router-dom';
 import Nav from './Components/Nav';
 import Result from './Components/Result';
 import About from './Components/About';
-import Search from './Components/Search';
 import Video from './Components/Video';
 
 class App extends Component {
@@ -50,7 +49,6 @@ class App extends Component {
     return (
       <div className="App">
         <Nav />
-        <Search />
 
         <main>
           <Routes>

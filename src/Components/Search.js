@@ -30,7 +30,7 @@ class Search extends Component {
             onChange={this.handleSearch}
           />
           <Link to={newURL}>
-            <button>Search</button>
+            <button>→</button>
           </Link>
         </form>
       </div>
