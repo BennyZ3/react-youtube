@@ -4,7 +4,7 @@
   width: 640px;
 }
 .Result {
-  margin-top: -750px;
+  margin-top: 5vh;
   background: whitesmoke;
   border: solid 2px black;
   display: grid;

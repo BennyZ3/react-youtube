@@ -7,8 +7,7 @@
   align-items: center;
   padding-left: 50px;
   padding-right: 50px;
-  position: sticky;
-  top: 0;
+  position: fixed;
 }
 .Nav .icon {
   display: flex;
