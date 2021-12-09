@@ -29,33 +29,9 @@ const Result = () => {
   }, [search]);
 
   if (data) {
-// <<<<<<< bz-branch
-//     result = data.items.map((element) => (
-//       <div key={element.id.videoId} className="card">
-//         <Link to={`/videos/${element.id.videoId}`}></Link>
-// =======
-
     result = data.items.map((element) => <ResultVideo vid={element} />);
   }
-
   return <div className="Result">{result ? result : "Loading"}</div>;
-
-
-        <video
-          key={element.id.videoId}
-          onMouseOver={(e) => e.target.play()}
-          onMouseOut={(e) => e.target.pause()}
-          src={`https://youtu.be/${element.id.videoId}`}
-        />
-
-        <h3>{element.snippet.title}</h3>
-      </div>
-    ));
-  }
-
-  return <div className="Result">{result ? result : "Loading"}</div>;
-  // }
-
 };
 
 export default Result;
