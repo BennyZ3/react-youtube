@@ -7,6 +7,8 @@
   align-items: center;
   padding-left: 50px;
   padding-right: 50px;
+  position: sticky;
+  top: 0;
 }
 .Nav .icon {
   display: flex;
@@ -27,8 +29,4 @@
 .Nav img {
   height: 5vh;
   margin-right: 5px;
-}
-
-.Nav text {
-  font-size: 200px;
 }

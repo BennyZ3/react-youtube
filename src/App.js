@@ -5,6 +5,7 @@ import Nav from './Components/Nav';
 import Result from './Components/Result';
 import About from './Components/About';
 import Video from './Components/Video';
+import PopularVideo from './Components/PopularVideos';
 
 class App extends Component {
   constructor() {
@@ -14,6 +15,20 @@ class App extends Component {
     };
   }
 
+  componentDidMount() {
+    fetch(
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=ariana+grande
+      &key=${process.env.REACT_APP_API_KEY}`
+    )
+      .then((res) => res.json())
+      .then((json) => {
+        console.log(json);
+        this.setState({
+          data: json,
+          DataIsLoaded: true,
+        });
+      });
+  }
   // getData() {
   //   fetch(
   //     `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=ariana+grande
@@ -52,6 +67,7 @@ class App extends Component {
 
         <main>
           <Routes>
+            <Route exact path="/" element={<PopularVideo />} />
             <Route path="/videos/search_query=:search" element={<Result />} />
             <Route path="/videos/:id" element={<Video />} />
             <Route path="/about" element={<About />} />

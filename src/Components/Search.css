@@ -21,9 +21,6 @@
 .Search select:-webkit-autofill:hover,
 .Search select:-webkit-autofill:focus {
   border: 0;
-  -webkit-text-fill-color: white;
-  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
-  transition: background-color 5000s ease-in-out 0s;
 }
 
 .Search form {
@@ -46,4 +43,4 @@
   font-size: 25px;
   font-weight: 10000;
   margin: auto;
-}
+

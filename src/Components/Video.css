@@ -1,12 +1,15 @@
 .Video-container {
-  background: whitesmoke;
-  height: 900px;
-  width: 1600px;
-  margin-top: -750px;
+  background: #181818;
+  /* height: 900px;
+  width: 1600px; */
+  margin-top: -850px;
+  margin-bottom: 20px;
 }
 .Video {
   margin-left: 18%;
   margin-top: 10%;
-  width: 60%;
-  height: 550px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  /* width: 75%; */
+  /* height: 550px; */
 }
