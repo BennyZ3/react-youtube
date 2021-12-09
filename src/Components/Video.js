@@ -3,8 +3,7 @@ import YouTube from "react-youtube";
 import { useParams } from "react-router";
 import Comments from "./Comments";
 
-const Video = () => {
-  // const { id } = this.props.match.params;
+const Video = (props) => {
   const params = useParams();
   console.log(params.snippet);
   return (
