@@ -1,21 +1,22 @@
 .card {
-  margin-left: 53%;
+  margin-left: 12%;
   margin-top: 15%;
-  width: 400px;
+  width: 640px;
 }
-.container {
+.Result {
   margin-top: -750px;
   background: whitesmoke;
   border: solid 2px black;
   display: grid;
-  grid-template-columns: repeat(2, 35%);
+  grid-template-columns: repeat(2, 48%);
   height: auto;
 }
 
 h3 {
-  width: 400px;
   height: auto;
-}
-h3 {
   margin-top: 15px;
+  color: black;
+}
+.link {
+  width: fit-content;
 }
