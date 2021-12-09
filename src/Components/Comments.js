@@ -43,19 +43,23 @@ class Comments extends Component {
             name="name"
             type="text"
             placeholder="Name"
-            style={{ fontFamily: "Arial" }}
+            style={{
+              fontFamily: "Arial",
+              color: "#FFFFFF",
+              backgroundColor: "#181818",
+            }}
+            contentEditable
           />
           <textarea
-            cols="40"
-            rows="3"
             id="comment"
             name="comment"
             className="commentBox"
             type="text"
             placeholder="Add a public comment..."
-            style={{ fontFamily: "Arial" }}
+            style={{ fontFamily: "Arial", color: "#FFFFFF" }}
+            contentEditable
           />
-          <button type="submit">Submit</button>
+          <button type="submit">COMMENT</button>
         </form>
         <div>
           <Comment comments={this.state.comments} />
