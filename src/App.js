@@ -12,35 +12,41 @@ class App extends Component {
     super();
     this.state = {
       data: "",
-      DataIsLoaded: false,
     };
   }
 
-  componentDidMount() {
-    fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=ariana+grande
-      &key=${process.env.REACT_APP_API_KEY}`
-    )
-      .then((res) => res.json())
-      .then((json) => {
-        this.setState({
-          data: json,
-          DataIsLoaded: true,
-        });
-      });
-  }
+  // getData() {
+  //   fetch(
+  //     `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=ariana+grande
+  //     &key=${process.env.REACT_APP_API_KEY}`
+  //   )
+  //     .then((res) => res.json())
+  //     .then((json) => {
+  //       this.setState({
+  //         data: json,
+  //         DataIsLoaded: true,
+  //       });
+  //     });
+  // }
+
+  // updateData = (newData) => {
+  //   this.setState({
+  //     data: newData,
+  //   });
+  // };
 
   render() {
-    const { DataIsLoaded, data } = this.state;
+    // const { DataIsLoaded, data } = this.state;
     // console.log(data);
 
-    if (!DataIsLoaded)
-      return (
-        <div>
-          <h1> Pleases wait some time.... </h1>{" "}
-        </div>
-      );
+    // if (!DataIsLoaded)
+    //   return (
+    //     <div>
+    //       <h1> Pleases wait some time.... </h1>{' '}
+    //     </div>
+    //   );
 
+    const { data } = this.state;
     return (
       <div className="App">
         <Nav />
@@ -48,7 +54,7 @@ class App extends Component {
 
         <main>
           <Routes>
-            <Route path="/videos" element={<Result data={data} />} />
+            <Route path="/videos/search_query=:search" element={<Result />} />
             <Route path="/videos/:id" element={<Video />} />
             <Route path="/about" element={<About />} />
           </Routes>

@@ -3,8 +3,6 @@ import YouTube from "react-youtube";
 import { useParams } from "react-router";
 
 const Video = (props) => {
-  // console.log(props);
-  // const { id } = props.match.params;
   const params = useParams();
   return (
     <div className="Video-container">
