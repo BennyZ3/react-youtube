@@ -2,17 +2,29 @@
   text-align: center;
   display: grid;
   grid-template-columns: 1fr;
+  padding-left: 7.5%;
 }
 
 .commentSection form {
   display: grid;
   width: 70%;
   grid-template-columns: 1fr;
-  padding-left: 7.5%;
   text-align: left;
+}
+.commentBox {
+  height: 80px;
 }
 
 .commentSection button {
   width: 100px;
   margin: 15px;
+}
+
+.comment {
+  text-align: left;
+}
+
+.commentName {
+  font-weight: bolder;
+  margin-bottom: 3px;
 }
