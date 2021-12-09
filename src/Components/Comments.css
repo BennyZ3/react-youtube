@@ -1,0 +1,38 @@
+.commentSection {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-left: 7.5%;
+  font-family: Arial;
+}
+
+.commentSection form {
+  display: grid;
+  width: 70%;
+  grid-template-columns: 1fr;
+  text-align: left;
+  font-family: Arial;
+}
+.commentBox {
+  width: 50ch;
+}
+.commentSection input {
+  margin-bottom: 10px;
+  width: 150px;
+}
+
+.commentSection button {
+  width: 100px;
+  margin: 15px;
+  /* font-family: Arial; */
+}
+
+.comment {
+  text-align: left;
+  /* font-family: Arial; */
+}
+
+.commentName {
+  font-weight: bolder;
+  margin-bottom: 3px;
+}

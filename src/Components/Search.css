@@ -1,4 +1,6 @@
 .Search {
   background: red;
   height: 50px;
+  position: sticky;
+  top: 1;
 }

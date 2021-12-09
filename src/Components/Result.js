@@ -1,4 +1,3 @@
-
 import "./Result.css";
 import { Component, useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
@@ -25,13 +24,16 @@ const Result = () => {
         setData(json);
       })
       .catch((error) => {
-
         console.log('error');
-
       });
   }, [search]);
 
   if (data) {
+// <<<<<<< bz-branch
+//     result = data.items.map((element) => (
+//       <div key={element.id.videoId} className="card">
+//         <Link to={`/videos/${element.id.videoId}`}></Link>
+// =======
 
     result = data.items.map((element) => <ResultVideo vid={element} />);
   }
@@ -51,7 +53,7 @@ const Result = () => {
     ));
   }
 
-  return <div className="Result">{result ? result : 'Loading'}</div>;
+  return <div className="Result">{result ? result : "Loading"}</div>;
   // }
 
 };
