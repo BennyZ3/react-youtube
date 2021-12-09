@@ -26,22 +26,6 @@ const Result = () => {
     result = data.items.map((element) => (
       <div key={element.id.videoId} className="card">
         <Link to={`/videos/${element.id.videoId}`}></Link>
-        {/* {
-          <img
-            src={element.snippet.thumbnails.high.url}
-            alt={element.snippet.title}
->>>>>>> main
-          />
-        } */}
-
-        {/* <ReactPlayer
-          className="Video"
-          url={`https://youtu.be/${element.id.videoId}`}
-          key={element.id.videoId}
-          onMouseOver={(e) => e.target.play()}
-          onMouseOut={(e) => e.target.pause()}
-        /> */}
-
         <video
           key={element.id.videoId}
           onMouseOver={(e) => e.target.play()}

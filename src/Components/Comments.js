@@ -38,23 +38,23 @@ class Comments extends Component {
     return (
       <div className="commentSection">
         <form onSubmit={this.handleSubmit}>
-          <label>
-            Name:
-            <p />
-            <input id="name" name="name" type="text" />
-          </label>
-          <label>
-            Comment:
-            <p />
-            <textarea
-              cols="80"
-              rows="5"
-              id="comment"
-              name="comment"
-              className="commentBox"
-              type="text"
-            />
-          </label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Name"
+            style={{ fontFamily: "Arial" }}
+          />
+          <textarea
+            cols="40"
+            rows="3"
+            id="comment"
+            name="comment"
+            className="commentBox"
+            type="text"
+            placeholder="Add a public comment..."
+            style={{ fontFamily: "Arial" }}
+          />
           <button type="submit">Submit</button>
         </form>
         <div>

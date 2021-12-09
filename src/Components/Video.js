@@ -6,6 +6,7 @@ import Comments from "./Comments";
 const Video = () => {
   // const { id } = this.props.match.params;
   const params = useParams();
+  console.log(params.snippet);
   return (
     <>
       <div className="Video-container">
