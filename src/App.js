@@ -6,6 +6,7 @@ import Result from "./Components/Result";
 import About from "./Components/About";
 import Search from "./Components/Search";
 import Video from "./Components/Video";
+import PopularVideo from "./Components/PopularVideos";
 
 class App extends Component {
   constructor() {
@@ -54,6 +55,7 @@ class App extends Component {
 
         <main>
           <Routes>
+            <Route exact path="/" element={<PopularVideo />} />
             <Route path="/videos/search_query=:search" element={<Result />} />
             <Route path="/videos/:id" element={<Video />} />
             <Route path="/about" element={<About />} />
