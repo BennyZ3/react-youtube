@@ -35,3 +35,10 @@
   font-size: 12px;
   white-space: pre-line;
 }
+
+.showMoreBtn {
+  color: #999999;
+  border: 0px;
+  background-color: #181818;
+  font-family: Arial;
+}

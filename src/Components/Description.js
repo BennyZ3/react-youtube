@@ -5,7 +5,10 @@ class Description extends Component {
     super();
     this.state = {
       data: "",
-      result: "",
+      showMore: false,
+      title: "",
+      channel: "",
+      description: "",
     };
   }
   componentDidMount() {
@@ -17,18 +20,33 @@ class Description extends Component {
         const info = json.items[0].snippet;
         this.setState({
           data: json,
-          result: (
-            <div className="info">
-              <p className="title">{info.title}</p>
-              <p className="channel">{info.channelTitle}</p>
-              <p className="description">{info.description}</p>
-            </div>
-          ),
+          title: info.title,
+          channel: info.channelTitle,
+          description: info.description,
         });
       });
   }
+
   render() {
-    return <>{this.state.result}</>;
+    return (
+      <>
+        <div className="info">
+          <p className="title">{this.state.title}</p>
+          <p className="channel">{this.state.channel}</p>
+          <p className="description">
+            {this.state.showMore
+              ? this.state.description + "\n"
+              : this.state.description.split("\n").slice(0, 4).join(`\n`)}
+            <button
+              className="showMoreBtn"
+              onClick={() => this.setState({ showMore: !this.state.showMore })}
+            >
+              {this.state.showMore ? "SHOW LESS" : "SHOW MORE"}
+            </button>
+          </p>
+        </div>
+      </>
+    );
   }
 }
 
