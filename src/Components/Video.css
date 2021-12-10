@@ -2,14 +2,36 @@
   background: #181818;
   /* height: 900px;
   width: 1600px; */
-  margin-top: -850px;
-  margin-bottom: 20px;
+  /* height: 900px; */
+  margin-top: -750px;
+  /* margin-bottom: 20px; */
 }
 .Video {
-  margin-left: 18%;
+  margin-left: 5%;
   margin-top: 10%;
-  padding-top: 30px;
+  width: 60%;
+  height: 480px;
   padding-bottom: 20px;
-  /* width: 75%; */
-  /* height: 550px; */
+}
+
+.info {
+  color: #ffffff;
+  font-family: Arial;
+  width: 60%;
+  margin-left: 5%;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.channel {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 12px;
+  white-space: pre-line;
 }

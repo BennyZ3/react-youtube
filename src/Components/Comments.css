@@ -2,7 +2,7 @@
   text-align: center;
   display: grid;
   grid-template-columns: 1fr;
-  padding-left: 7.5%;
+  padding-left: 5%;
   font-family: Arial;
   background-color: #181818;
   color: #ffffff;
@@ -14,7 +14,7 @@
   grid-template-columns: 1fr;
   text-align: left;
   font-family: Arial;
-  padding-top: 15px;
+  margin-top: 15px;
 }
 .commentBox {
   width: 50ch;
