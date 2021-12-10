@@ -64,7 +64,6 @@ class App extends Component {
     return (
       <div className="App">
         <Nav />
-
         <main>
           <Routes>
             <Route exact path="/" element={<PopularVideo />} />
