@@ -1,20 +1,17 @@
-import { Component } from "react";
-import "./App.css";
-import { Route, Routes } from "react-router-dom";
-import Nav from "./Components/Nav";
-import Result from "./Components/Result";
-import About from "./Components/About";
-import Search from "./Components/Search";
-import Video from "./Components/Video";
-import PopularVideo from "./Components/PopularVideos";
+import { Component } from 'react';
+import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import Nav from './Components/Nav';
+import Result from './Components/Result';
+import About from './Components/About';
+import Video from './Components/Video';
+import PopularVideo from './Components/PopularVideos';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-
       data: '',
-
     };
   }
 
@@ -67,7 +64,6 @@ class App extends Component {
     return (
       <div className="App">
         <Nav />
-        <Search />
 
         <main>
           <Routes>

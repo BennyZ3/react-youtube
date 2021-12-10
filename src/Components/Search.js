@@ -33,7 +33,7 @@ class Search extends Component {
           <input type="text" name="searchBar" id="searchBar" onChange={this.handleSearch} />
 
           <Link to={newURL}>
-            <button>Search</button>
+            <button>→</button>
           </Link>
         </form>
       </div>
