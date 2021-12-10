@@ -11,7 +11,7 @@ class Nav extends Component {
         <Link to="/">
           <div className="icon">
             <img src={logo} alt="logo" />
-            <div id="text">Youtube</div>
+            <div id="text">YouTube</div>
           </div>
         </Link>
         <Search />
