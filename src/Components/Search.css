@@ -44,3 +44,9 @@
   font-weight: 10000;
   margin: auto;
 }
+
+.Search img {
+  height: 5px;
+  margin: auto;
+  min-height: 15px;
+}
