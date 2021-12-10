@@ -1,7 +1,31 @@
 .Nav {
-  background-color: blue;
+  background-color: rgb(32, 32, 32);
   height: 100px;
   width: 100%;
-  position: sticky;
-  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: fixed;
+}
+.Nav .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.Nav a,
+.Nav a:hover,
+.Nav a:visited,
+.Nav a:active {
+  text-decoration: none;
+}
+
+.Nav img {
+  height: 5vh;
+  margin-right: 5px;
 }
