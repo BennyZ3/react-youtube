@@ -1,12 +1,12 @@
-import "./Result.css";
-import { Component, useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
-import YouTube from "react-youtube";
-import ReactPlayer from "react-player";
-import ResultVideo from "./ResultVideo";
+import './Result.css';
+import { Component, useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import YouTube from 'react-youtube';
+import ReactPlayer from 'react-player';
+import ResultVideo from './ResultVideo';
 
 const PopularVideo = () => {
-  const [data, setData] = useState("");
+  const [data, setData] = useState('');
   const [play, setPlay] = useState(false);
 
   let result = null;
@@ -20,15 +20,17 @@ const PopularVideo = () => {
         setData(json);
       })
       .catch((error) => {
-        console.log("error");
+        console.log('error');
       });
   }, []);
 
   if (data) {
-    result = data.items.map((element) => <ResultVideo vid={element} />);
+    result = !data.error
+      ? data.items.map((element) => <ResultVideo vid={element} />)
+      : data.error.errors.map((error) => <p>{error.message}</p>);
   }
 
-  return <div className="Result">{result ? result : "Loading"}</div>;
+  return <div className="Result">{result ? result : 'Loading'}</div>;
 };
 
 export default PopularVideo;
