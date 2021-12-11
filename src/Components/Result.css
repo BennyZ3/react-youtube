@@ -1,15 +1,15 @@
 .card {
   margin-left: 12%;
   margin-top: 15%;
-  width: 640px;
+  width: 340px;
 }
 .Result {
-  margin-top: 5vh;
+  margin-top: 12vh;
   background: whitesmoke;
-  border: solid 2px black;
   display: grid;
-  grid-template-columns: repeat(2, 48%);
+  grid-template-columns: repeat(2, 70%);
   height: auto;
+  width: 100%;
 }
 
 h3 {
@@ -19,4 +19,29 @@ h3 {
 }
 .link {
   width: fit-content;
+}
+.favorites {
+  width: 43%;
+  background-color: lightgray;
+  height: auto;
+}
+.videos {
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  width: 100%;
+}
+
+.button {
+  color: white;
+  background-color: rgb(255, 1, 0);
+  margin-left: 12%;
+  font-size: 17px;
+  border-radius: 25px;
+}
+.player {
+  margin-top: -15%;
+}
+
+.vid {
+  margin-top: 15%;
 }
