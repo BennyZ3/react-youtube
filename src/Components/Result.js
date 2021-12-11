@@ -25,20 +25,22 @@ const Result = (props) => {
   }, [search]);
 
   if (data) {
-    result = data.items.map((element) => (
-      <div className="vid">
-        <button className="button" onClick={() => props.handleFav(element)}>
-          Add To Favorites
-        </button>
-        <ResultVideo vid={element} />
-      </div>
-    ));
+    result =  !data.error
+      ? data.items.map((element) => (
+        <div className="vid">
+          <button className="button" onClick={() => props.handleFav(element)}>
+            Add To Favorites
+          </button>
+          <ResultVideo vid={element} />
+        </div>
+      ));
 
-    favorite = (
-      <div>
-        <Favorite fav={props.fav} />
-      </div>
-    );
+      favorite = (
+        <div>
+          <Favorite fav={props.fav} />
+        </div>
+      );
+    : data.error.errors.map((error) => <p>{error.message}</p>
   }
 
   return (

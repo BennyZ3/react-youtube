@@ -18,19 +18,21 @@ const PopularVideo = (props) => {
         setData(json);
       })
       .catch((error) => {
-        console.log("error");
+        console.log('error');
       });
   }, []);
 
   if (data) {
-    result = data.items.map((element) => (
-      <div className="vid">
-        <button className="button" onClick={() => props.handleFav(element)}>
-          Add To Favorites
-        </button>
-        <ResultVideo vid={element} />
-      </div>
-    ));
+     result = !data.error
+      ? data.items.map((element) => (
+           <div className="vid">
+            <button className="button" onClick={() => props.handleFav(element)}>
+              Add To Favorites
+            </button>
+            <ResultVideo vid={element} />
+          </div>
+          ));
+      : data.error.errors.map((error) => <p>{error.message}</p>);
 
     favorite = (
       <div>
