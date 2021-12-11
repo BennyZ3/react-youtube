@@ -1,10 +1,10 @@
-import "./Result.css";
-import { useState, useEffect } from "react";
-import ResultVideo from "./ResultVideo";
-import Favorite from "./Favorite";
+import './Result.css';
+import { useState, useEffect } from 'react';
+import ResultVideo from './ResultVideo';
+import Favorite from './Favorite';
 
 const PopularVideo = (props) => {
-  const [data, setData] = useState("");
+  const [data, setData] = useState('');
 
   let result = null;
   let favorite = null;
@@ -23,15 +23,15 @@ const PopularVideo = (props) => {
   }, []);
 
   if (data) {
-     result = !data.error
+    result = !data.error
       ? data.items.map((element) => (
-           <div className="vid">
+          <div className="vid">
             <button className="button" onClick={() => props.handleFav(element)}>
               Add To Favorites
             </button>
             <ResultVideo vid={element} />
           </div>
-          ));
+        ))
       : data.error.errors.map((error) => <p>{error.message}</p>);
 
     favorite = (
@@ -43,7 +43,7 @@ const PopularVideo = (props) => {
 
   return (
     <div className="Result">
-      <div className="videos">{result ? result : "Loading"}</div>
+      <div className="videos">{result ? result : 'Loading'}</div>
       <div className="favorites">{favorite}</div>
     </div>
   );
