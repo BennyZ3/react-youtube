@@ -1,4 +1,4 @@
-import { Component, useState } from "react";
+import { useState } from "react";
 import ReactPlayer from "react-player";
 import { Link } from "react-router-dom";
 
@@ -7,6 +7,7 @@ const ResultVideo = (props) => {
   return (
     <div className="card" key={props.vid.id.videoId}>
       <ReactPlayer
+        className="player"
         key={props.vid.id.videoId}
         onMouseEnter={() => setPlay(true)}
         onMouseLeave={() => setPlay(false)}
@@ -16,6 +17,8 @@ const ResultVideo = (props) => {
         showinfo="0"
         volume="0"
         frameborder="0"
+        width="320px"
+        height="200px"
       />
 
       <div className="link">

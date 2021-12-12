@@ -1,4 +1,3 @@
-import { Component } from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Nav from "./Components/Nav";
@@ -6,46 +5,30 @@ import Result from "./Components/Result";
 import About from "./Components/About";
 import Video from "./Components/Video";
 import PopularVideo from "./Components/PopularVideos";
+import { useState } from "react";
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      data: "",
-    };
-  }
+const App = () => {
+  const [fav, setFav] = useState("");
 
-  componentDidMount() {
-    fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=ariana+grande
-      &key=${process.env.REACT_APP_API_KEY}`
-    )
-      .then((res) => res.json())
-      .then((json) => {
-        // console.log(json);
-        this.setState({
-          data: json,
-          DataIsLoaded: true,
-        });
-      });
-  }
+  const handleFav = (video) => {
+    setFav([...fav, video]);
+  };
 
-  render() {
-    const { data } = this.state;
-    return (
-      <div className="App">
-        <Nav />
-        <main>
-          <Routes>
-            <Route exact path="/" element={<PopularVideo />} />
-            <Route path="/videos/search_query=:search" element={<Result />} />
-            <Route path="/videos/:id" element={<Video />} />
-            <Route path="/about" element={<About />} />
-          </Routes>
-        </main>
-      </div>
-    );
-  }
-}
+//   console.log(fav);
+
+  return (
+    <div className="App">
+      <Nav />
+      <main>
+        <Routes>
+          <Route exact path="/" element={<PopularVideo handleFav={handleFav} fav={fav} />} />
+          <Route path="/videos/search_query=:search" element={<Result handleFav={handleFav} fav={fav} />} />
+          <Route path="/videos/:id" element={<Video />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </main>
+    </div>
+  );
+};
 
 export default App;

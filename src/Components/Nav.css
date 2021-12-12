@@ -1,18 +1,28 @@
 .Nav {
   background-color: rgb(32, 32, 32);
-  height: 100px;
+  height: 6vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 50px;
-  padding-right: 50px;
   position: fixed;
+  padding: 0px 2vw;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  box-sizing: border-box;
+  min-height: 50px;
 }
+
 .Nav .icon {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.Nav #about {
   color: white;
   font-size: 25px;
   font-weight: bold;
@@ -28,4 +38,5 @@
 .Nav img {
   height: 5vh;
   margin-right: 5px;
+  min-height: 40px;
 }
