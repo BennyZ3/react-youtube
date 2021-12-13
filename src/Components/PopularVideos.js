@@ -1,4 +1,3 @@
-
 import "./Result.css";
 import { useState, useEffect } from "react";
 import ResultVideo from "./ResultVideo";
@@ -16,12 +15,11 @@ const PopularVideo = (props) => {
         setData(json);
       })
       .catch((error) => {
-        console.log('error');
+        console.log("error");
       });
   }, []);
 
   if (data) {
-<<<<<<< HEAD
     result = data.items.map((element) => (
       <div className="vid">
         <button className="button" onClick={() => props.handleFav(element)}>
@@ -34,7 +32,7 @@ const PopularVideo = (props) => {
 
   return (
     <div className="Result">
-     <div className="videos">{result ? result : "Loading"}</div>
+      <div className="videos">{result ? result : "Loading"}</div>
     </div>
   );
 };
