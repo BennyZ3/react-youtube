@@ -16,7 +16,9 @@ const App = () => {
   };
 
   const handleDelete = (video) => {
-    const remainder = fav.filter((favorites) => favorites.id.videoId !== video.id.videoId);
+    const remainder = fav.filter(
+      (favorites) => favorites.id.videoId !== video.id.videoId
+    );
     setFav(remainder);
   };
 
@@ -50,7 +52,10 @@ const App = () => {
               </div>
             }
           />
-          <Route path="/videos/:id" element={<Video />} />
+          <Route
+            path="/videos/:id"
+            element={<Video fav={fav} handleDelete={handleDelete} />}
+          />
           <Route path="/about" element={<About />} />
         </Routes>
       </main>
