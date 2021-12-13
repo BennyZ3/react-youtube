@@ -6,7 +6,7 @@
 
 .Result {
   background-color: rgb(24, 24, 24);
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
   color: white;
 }
@@ -15,12 +15,14 @@ h3 {
   height: auto;
   margin-top: 15px;
   color: white;
+  margin-bottom: 20%;
 }
 
 .link {
   width: fit-content;
 }
 .favorites {
+  height: 50px;
   background-color: rgb(56, 56, 56);
   width: 420px;
   margin-right: 0px;
@@ -37,13 +39,14 @@ h3 {
 .favButton {
   color: white;
   background-color: rgb(255, 1, 0);
-  margin-left: 12%;
+  margin-left: 0%;
   font-size: 17px;
   border-radius: 25px;
-  margin-top: 20%;
+  margin-top: 15%;
+  margin-bottom: 500px;
 }
 .player {
-  margin-top: -15%;
+  margin-top: 0%;
 }
 
 .favVid {
