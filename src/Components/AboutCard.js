@@ -7,9 +7,10 @@ class AboutCard extends Component {
   render() {
     console.log(this.props.collaborators[0]);
     let aboutCards = this.props.collaborators.map((person) => {
-      let { firstName, lastName, github, linkedIn, bio } = person;
+      let { firstName, lastName, github, linkedIn, bio, image } = person;
       return (
         <div className="aboutCard">
+          <img src={image} />
           <h2>{firstName + " " + lastName}</h2>
           <p>
             <strong>GitHub: </strong>
