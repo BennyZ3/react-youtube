@@ -1,22 +1,30 @@
 .card {
-  margin-left: 12%;
-  margin-top: 15%;
-  width: 640px;
+  width: 100%;
 }
 .Result {
-  margin-top: 5vh;
-  background: whitesmoke;
-  border: solid 2px black;
+  background-color: rgb(24, 24, 24);
   display: grid;
-  grid-template-columns: repeat(2, 48%);
-  height: auto;
+  grid-template-columns: 3fr 1fr;
+  height: 100%;
+  width: 100%;
 }
 
-h3 {
+.Result h3 {
   height: auto;
   margin-top: 15px;
-  color: black;
+  color: white;
 }
+
 .link {
   width: fit-content;
+}
+.favorites {
+  width: 100%;
+  background-color: rgb(56, 56, 56);
+  height: auto;
+}
+.videos {
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  width: 100%;
 }
