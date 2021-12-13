@@ -13,7 +13,7 @@ const Video = (props) => {
         <YouTube className="Video" videoId={params.id} />
         <Description videoId={params.id} />
       </div>
-      <Comments />
+      <Comments videoId={params.id} />
     </>
   );
 };
