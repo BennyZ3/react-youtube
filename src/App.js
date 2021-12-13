@@ -14,7 +14,7 @@ const App = () => {
     setFav([...fav, video]);
   };
 
-  console.log(fav);
+//   console.log(fav);
 
   return (
     <div className="App">

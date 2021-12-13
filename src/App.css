@@ -1,4 +1,5 @@
 .App {
   display: grid;
-  grid-template-rows: 1fr;
+  grid-template-rows: 1fr 8fr;
+  background-color: #181818;
 }

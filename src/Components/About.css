@@ -1,4 +1,12 @@
 .About {
-  background-color: slateblue;
+  background-color: #181818;
   height: 500px;
+  margin-top: 100px;
+  padding-left: 30px;
+  color: #ffffff;
+}
+
+.aboutCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
