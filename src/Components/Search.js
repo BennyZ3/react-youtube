@@ -10,7 +10,6 @@ class Search extends Component {
       redirect: false,
 
       search: "",
-      d96531cfb74766e3f85985541b7962fe0047506,
     };
   }
 
