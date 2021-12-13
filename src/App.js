@@ -14,12 +14,14 @@ const App = () => {
   const handleFav = (video) => {
     setFav([...fav, video]);
   };
+
   const handleDelete = (video) => {
     const remainder = fav.filter((favorites) => favorites.id.videoId !== video.id.videoId);
     setFav(remainder);
   };
 
   console.log(fav);
+
   return (
     <div className="App">
       <Nav />
@@ -57,20 +59,3 @@ const App = () => {
 };
 
 export default App;
-
-// componentDidMount() {
-//   this.commentsData = JSON.parse(localStorage.getItem("userComments"));
-
-//   if (localStorage.getItem("userComments")) {
-//     this.setState({
-//       comments: this.commentsData.comments,
-//     });
-//   } else {
-//     this.setState({
-//       comments: [],
-//     });
-//   }
-// }
-// componentWillUpdate(nextProps, nextState) {
-//   localStorage.setItem("userComments", JSON.stringify(nextState));
-// }

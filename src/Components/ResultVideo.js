@@ -1,11 +1,12 @@
 import { useState } from "react";
 import ReactPlayer from "react-player";
 import { Link } from "react-router-dom";
+import "./ResultVideo.css";
 
 const ResultVideo = (props) => {
   const [play, setPlay] = useState(false);
   return (
-    <div className="card" key={props.vid.id.videoId}>
+    <div className="ResultVideo" key={props.vid.id.videoId}>
       <ReactPlayer
         className="player"
         key={props.vid.id.videoId}

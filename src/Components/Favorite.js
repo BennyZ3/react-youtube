@@ -2,6 +2,7 @@ import "./Result.css";
 import ResultVideo from "./ResultVideo";
 
 let favorites = null;
+
 const Favorite = (props) => {
   console.log(props.fav);
   if (props.fav.length > 0) {

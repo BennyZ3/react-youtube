@@ -5,6 +5,7 @@ import ResultVideo from "./ResultVideo";
 
 const Result = (props) => {
   const [data, setData] = useState("");
+
   const { search } = useParams();
 
   let result = null;
@@ -31,7 +32,6 @@ const Result = (props) => {
         <ResultVideo vid={element} />
       </div>
     ));
-
   }
 
   return (
