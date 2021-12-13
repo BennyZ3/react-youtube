@@ -10,21 +10,19 @@
 
 .commentSection form {
   display: grid;
-  width: 70%;
+  width: 90%;
   grid-template-columns: 1fr;
   text-align: left;
   font-family: Arial;
   margin-top: 15px;
 }
 .commentBox {
-  width: 50ch;
   background-color: #181818;
   border: 0px;
   border-bottom: 1px #303030 solid;
 }
 .commentSection input {
   margin-bottom: 10px;
-  width: 150px;
   border: 0px;
   border-bottom: 1px #303030 solid;
 }
