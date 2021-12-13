@@ -27,7 +27,7 @@ const Result = (props) => {
   if (data) {
     result = !data.error
       ? data.items.map((element) => (
-          <div className="vid">
+          <div className="vids">
             <button className="button" onClick={() => props.handleFav(element)}>
               Add To Favorites
             </button>

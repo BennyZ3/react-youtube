@@ -3,7 +3,7 @@
   border-radius: 50px;
   border: 0;
   outline: none;
-  background-color: black;
+  background-color: rgb(18, 18, 18);
   color: white;
   font-weight: bold;
   height: 20px;
@@ -11,23 +11,11 @@
   font-size: 20px;
 }
 
-.Search input:-webkit-autofill,
-.Search input:-webkit-autofill:hover,
-.Search input:-webkit-autofill:focus,
-.Search textarea:-webkit-autofill,
-.Search textarea:-webkit-autofill:hover,
-.Search textarea:-webkit-autofill:focus,
-.Search select:-webkit-autofill,
-.Search select:-webkit-autofill:hover,
-.Search select:-webkit-autofill:focus {
-  border: 0;
-}
-
 .Search form {
   border: 1px solid dimgray;
   height: 40px;
   width: 400px;
-  background-color: black;
+  background-color: rgb(18, 18, 18);
   display: flex;
   align-content: center;
   border-radius: 5px;

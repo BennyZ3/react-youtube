@@ -1,6 +1,7 @@
-import "./Result.css";
-import ResultVideo from "./ResultVideo";
-import { useState, useEffect } from "react";
+import './Result.css';
+import './Favorite.css';
+import ResultVideo from './ResultVideo';
+import { useState, useEffect } from 'react';
 let favorites = null;
 
 const Favorite = (props) => {
@@ -14,9 +15,9 @@ const Favorite = (props) => {
   }
 
   return (
-    <details>
+    <details className="Favorite">
       <summary>Favorite Videos</summary>
-      {favorites ? favorites : "Loading"}
+      {favorites ? favorites : 'Loading'}
     </details>
   );
 };
