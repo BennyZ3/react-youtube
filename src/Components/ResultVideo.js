@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import ReactPlayer from "react-player";
 import { Link } from "react-router-dom";
 import "./ResultVideo.css";
+=======
+import { useState } from 'react';
+import ReactPlayer from 'react-player';
+import { Link } from 'react-router-dom';
+import './ResultVideo.css';
+>>>>>>> main
 
 const ResultVideo = (props) => {
   const [play, setPlay] = useState(false);

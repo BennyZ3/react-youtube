@@ -8,6 +8,7 @@ class Search extends Component {
     super();
     this.state = {
       redirect: false,
+
       search: "",
     };
   }
