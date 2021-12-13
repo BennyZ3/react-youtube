@@ -4,11 +4,7 @@
   width: 340px;
 }
 .Result {
-  margin-top: 12vh;
   background: whitesmoke;
-  display: grid;
-  grid-template-columns: repeat(2, 70%);
-  height: auto;
   width: 100%;
 }
 
@@ -21,8 +17,10 @@ h3 {
   width: fit-content;
 }
 .favorites {
-  width: 43%;
   background-color: lightgray;
+  height: 50px;
+  width: 420px;
+  margin-right: 0px;
   height: auto;
 }
 .videos {
@@ -31,17 +29,34 @@ h3 {
   width: 100%;
 }
 
-.button {
+.button,
+.favButton {
   color: white;
   background-color: rgb(255, 1, 0);
   margin-left: 12%;
   font-size: 17px;
   border-radius: 25px;
+  margin-top: 20%;
 }
 .player {
   margin-top: -15%;
 }
 
-.vid {
-  margin-top: 15%;
+.favVid {
+  height: 380px;
+  width: 100%;
+  margin-bottom: 5%;
+  margin-top: -7%;
+}
+
+.favButton {
+  margin-bottom: -15%;
+}
+main {
+  margin-top: 6%;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 74% 20%;
 }

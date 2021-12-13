@@ -1,13 +1,15 @@
 import "./Result.css";
 import ResultVideo from "./ResultVideo";
-import { useState, useEffect } from "react";
-let favorites = null;
 
+let favorites = null;
 const Favorite = (props) => {
   console.log(props.fav);
   if (props.fav.length > 0) {
     favorites = props.fav.map((video) => (
-      <div className="vid">
+      <div className="favVid">
+        <button className="favButton" onClick={() => props.handleDelete(video)}>
+          Remove
+        </button>
         <ResultVideo vid={video} />
       </div>
     ));
@@ -15,8 +17,10 @@ const Favorite = (props) => {
 
   return (
     <details>
-      <summary>Favorite Videos</summary>
-      {favorites ? favorites : "Loading"}
+      <summary>
+        <strong>Favorite Videos</strong>
+      </summary>
+      {favorites ? favorites : "No Videos Saved"}
     </details>
   );
 };

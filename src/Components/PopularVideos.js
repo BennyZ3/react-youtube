@@ -1,13 +1,11 @@
 import "./Result.css";
 import { useState, useEffect } from "react";
 import ResultVideo from "./ResultVideo";
-import Favorite from "./Favorite";
 
 const PopularVideo = (props) => {
   const [data, setData] = useState("");
 
   let result = null;
-  let favorite = null;
 
   useEffect(() => {
     fetch(
@@ -31,18 +29,11 @@ const PopularVideo = (props) => {
         <ResultVideo vid={element} />
       </div>
     ));
-
-    favorite = (
-      <div>
-        <Favorite fav={props.fav} />
-      </div>
-    );
   }
 
   return (
     <div className="Result">
       <div className="videos">{result ? result : "Loading"}</div>
-      <div className="favorites">{favorite}</div>
     </div>
   );
 };

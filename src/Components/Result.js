@@ -2,14 +2,13 @@ import "./Result.css";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ResultVideo from "./ResultVideo";
-import Favorite from "./Favorite";
 
 const Result = (props) => {
   const [data, setData] = useState("");
   const { search } = useParams();
 
   let result = null;
-  let favorite = null;
+  // let favorite = null;
 
   useEffect(() => {
     fetch(
@@ -26,7 +25,7 @@ const Result = (props) => {
 
   if (data) {
     result = data.items.map((element) => (
-      <div className="vid">
+      <div key={element.etag} className="vid">
         <button className="button" onClick={() => props.handleFav(element)}>
           Add To Favorites
         </button>
@@ -34,17 +33,17 @@ const Result = (props) => {
       </div>
     ));
 
-    favorite = (
-      <div>
-        <Favorite fav={props.fav} />
-      </div>
-    );
+    // favorite = (
+    //   <div>
+    //     <Favorite fav={props.fav} />
+    //   </div>
+    // );
   }
 
   return (
     <div className="Result">
       <div className="videos">{result ? result : "Loading"}</div>
-      <div className="favorites">{favorite}</div>
+      {/* <div className="favorites">{favorite}</div> */}
     </div>
   );
 };
