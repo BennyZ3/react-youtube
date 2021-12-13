@@ -7,7 +7,10 @@ const Favorite = (props) => {
   console.log(props.fav);
   if (props.fav.length > 0) {
     favorites = props.fav.map((video) => (
-      <div className="vid">
+      <div className="favVid">
+        <button className="favButton" onClick={() => props.handleDelete(video)}>
+          Remove
+        </button>
         <ResultVideo vid={video} />
       </div>
     ));

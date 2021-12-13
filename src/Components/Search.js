@@ -1,7 +1,7 @@
-import './Search.css';
-import { Component } from 'react';
-import { Link } from 'react-router-dom';
-import searchImage from './search.png';
+import "./Search.css";
+import { Component } from "react";
+import { Link } from "react-router-dom";
+import searchImage from "./search.png";
 
 class Search extends Component {
   constructor() {
@@ -9,7 +9,7 @@ class Search extends Component {
     this.state = {
       redirect: false,
 
-      search: '',
+      search: "",
     };
   }
 
@@ -22,7 +22,7 @@ class Search extends Component {
   render() {
     const { search } = this.state;
 
-    const newURL = search && '/videos/search_query=' + search;
+    const newURL = search && "/videos/search_query=" + search;
 
     return (
       <div className="Search">
