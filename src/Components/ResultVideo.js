@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import ReactPlayer from 'react-player';
-import { Link } from 'react-router-dom';
-import './ResultVideo.css';
+import { useState } from "react";
+import ReactPlayer from "react-player";
+import { Link } from "react-router-dom";
+import "./ResultVideo.css";
 
 const ResultVideo = (props) => {
   const [play, setPlay] = useState(false);
@@ -13,7 +13,7 @@ const ResultVideo = (props) => {
         onMouseEnter={() => setPlay(true)}
         onMouseLeave={() => setPlay(false)}
         modestbranding="0"
-        url={'https://youtube.com/embed/' + props.vid.id.videoId}
+        url={"https://youtube.com/embed/" + props.vid.id.videoId}
         playing={play}
         showinfo="0"
         volume="0"
@@ -31,24 +31,3 @@ const ResultVideo = (props) => {
   );
 };
 export default ResultVideo;
-
-{
-  /* {<img src={props.vid.snippet.thumbnails.high.url} alt={props.vid.snippet.title} />} */
-}
-
-{
-  /* <img src={element.snippet.thumbnails.high.url} alt={element.snippet.title} /> */
-}
-{
-  /* <ReactPlayer
-          className="Video"
-          src={element.snippet.thumbnails.high.url}
-          alt={element.snippet.title}
-          url={`https://youtube.com/embed/${element.id.videoId}`}
-          url="https://s3.amazonaws.com/codecademy-content/courses/React/react_video-fast.mp4"
-
-          key={element.id.videoId}
-          onMouseOver={(e) => e.target.play()}
-          onMouseOut={(e) => e.target.pause()}
-        /> */
-}

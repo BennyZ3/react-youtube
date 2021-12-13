@@ -1,30 +1,68 @@
 .card {
-  width: 100%;
-}
-.Result {
-  background-color: rgb(24, 24, 24);
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  height: 100%;
-  width: 100%;
+  margin-left: 12%;
+  margin-top: 15%;
+  width: 340px;
 }
 
-.Result h3 {
+.Result {
+  background-color: rgb(24, 24, 24);
+  width: 100%;
+  color: white;
+}
+
+h3 {
   height: auto;
   margin-top: 15px;
   color: white;
+  margin-bottom: 20%;
 }
 
 .link {
   width: fit-content;
 }
 .favorites {
-  width: 100%;
+  height: 50px;
   background-color: rgb(56, 56, 56);
+  width: 420px;
+  margin-right: 0px;
   height: auto;
 }
+
 .videos {
   display: grid;
   grid-template-columns: repeat(3, 32%);
   width: 100%;
+}
+
+.button,
+.favButton {
+  color: white;
+  background-color: rgb(255, 1, 0);
+  margin-left: 0%;
+  font-size: 17px;
+  border-radius: 25px;
+  margin-top: 15%;
+  margin-bottom: 500px;
+}
+.player {
+  margin-top: 0%;
+}
+
+.favVid {
+  height: 380px;
+  width: 100%;
+  margin-bottom: 5%;
+  margin-top: -7%;
+}
+
+.favButton {
+  margin-bottom: -15%;
+}
+main {
+  margin-top: 6%;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 74% 20%;
 }
