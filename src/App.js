@@ -14,16 +14,21 @@ const App = () => {
     setFav([...fav, video]);
   };
 
-//   console.log(fav);
-
   return (
     <div className="App">
       <Nav />
       <main>
         <Routes>
-          <Route exact path="/" element={<PopularVideo handleFav={handleFav} fav={fav} />} />
-          <Route path="/videos/search_query=:search" element={<Result handleFav={handleFav} fav={fav} />} />
-          <Route path="/videos/:id" element={<Video />} />
+          <Route
+            exact
+            path="/"
+            element={<PopularVideo handleFav={handleFav} fav={fav} />}
+          />
+          <Route
+            path="/videos/search_query=:search"
+            element={<Result handleFav={handleFav} fav={fav} />}
+          />
+          <Route path="/videos/:id" element={<Video fav={fav} />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </main>
