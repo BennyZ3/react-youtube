@@ -1,8 +1,6 @@
-
 import "./Search.css";
 import { Component } from "react";
-import { Navigate, Link } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 
 class Search extends Component {
   constructor() {
@@ -11,7 +9,6 @@ class Search extends Component {
       redirect: false,
 
       search: "",
-
     };
   }
 
@@ -23,7 +20,6 @@ class Search extends Component {
 
   render() {
     const { search } = this.state;
-
 
     const newURL = search && "/videos/search_query=" + search;
 
@@ -42,4 +38,3 @@ class Search extends Component {
 }
 
 export default Search;
-
