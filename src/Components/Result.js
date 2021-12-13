@@ -8,7 +8,6 @@ const Result = (props) => {
   const { search } = useParams();
 
   let result = null;
-  // let favorite = null;
 
   useEffect(() => {
     fetch(
@@ -33,17 +32,11 @@ const Result = (props) => {
       </div>
     ));
 
-    // favorite = (
-    //   <div>
-    //     <Favorite fav={props.fav} />
-    //   </div>
-    // );
   }
 
   return (
     <div className="Result">
       <div className="videos">{result ? result : "Loading"}</div>
-      {/* <div className="favorites">{favorite}</div> */}
     </div>
   );
 };
