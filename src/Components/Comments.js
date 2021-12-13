@@ -3,7 +3,7 @@ import Comment from "./Comment";
 import "./Comments.css";
 
 class Comments extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
       comments: [
@@ -14,9 +14,22 @@ class Comments extends Component {
       ],
     };
   }
-  //Probably change to a way for comments to be saved
-  //I think can be done by converting into a json, but
-  //not sure how it will be stored on a deployed version.
+  componentDidMount() {
+    this.commentsData = JSON.parse(localStorage.getItem(this.props.videoId));
+
+    if (localStorage.getItem(this.props.videoId)) {
+      this.setState({
+        comments: this.commentsData.comments,
+      });
+    } else {
+      this.setState({
+        comments: [],
+      });
+    }
+  }
+  componentWillUpdate(nextProps, nextState) {
+    localStorage.setItem(this.props.videoId, JSON.stringify(nextState));
+  }
   handleSubmit = (event) => {
     event.preventDefault();
     let e = event.target;
