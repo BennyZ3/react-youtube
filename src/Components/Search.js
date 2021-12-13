@@ -32,6 +32,7 @@ class Search extends Component {
             name="searchBar"
             id="searchBar"
             placeholder="Search"
+            autocomplete="off"
             onChange={this.handleSearch}
           />
           <Link to={newURL}>
