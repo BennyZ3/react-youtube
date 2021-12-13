@@ -1,4 +1,5 @@
 import "./About.css";
+
 import { Component } from "react";
 import AboutCard from "./AboutCard";
 

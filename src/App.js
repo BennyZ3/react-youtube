@@ -20,6 +20,8 @@ const App = () => {
     setFav(remainder);
   };
 
+  console.log(fav);
+
   return (
     <div className="App">
       <Nav />
@@ -48,7 +50,7 @@ const App = () => {
               </div>
             }
           />
-          <Route path="/videos/:id" element={<Video />} fav={fav}/>
+          <Route path="/videos/:id" element={<Video />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </main>

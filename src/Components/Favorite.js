@@ -1,6 +1,6 @@
 import "./Result.css";
-import "./Favorite.css";
 import ResultVideo from "./ResultVideo";
+
 let favorites = null;
 
 const Favorite = (props) => {
@@ -17,9 +17,11 @@ const Favorite = (props) => {
   }
 
   return (
-    <details className="Favorite">
-      <summary>Favorite Videos</summary>
-      {favorites ? favorites : "Loading"}
+    <details>
+      <summary>
+        <strong>Favorite Videos</strong>
+      </summary>
+      {favorites ? favorites : "No Videos Saved"}
     </details>
   );
 };
