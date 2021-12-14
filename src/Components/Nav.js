@@ -3,6 +3,7 @@ import { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Search from './Search';
 import logo from './logo.png';
+import searchLogo from './about.png';
 
 class Nav extends Component {
   render() {
@@ -15,9 +16,12 @@ class Nav extends Component {
           </div>
         </Link>
         <Search />
-        <Link to="/About">
-          <div id="about">About</div>
-        </Link>
+        <div id="about">
+          <Link to="/About">
+            <div id="About">About</div>
+            <img id="icon" src={searchLogo} />
+          </Link>
+        </div>
       </div>
     );
   }

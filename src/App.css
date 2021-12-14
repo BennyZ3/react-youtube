@@ -1,9 +1,8 @@
 .App {
-  display: grid;
-  grid-template-rows: 1fr;
   background-color: rgb(24, 24, 24);
   height: 100vh;
   width: calc(100vw - (100vw - 100%));
+  min-width: 670px;
 }
 .App main {
   padding: 20px 40px;

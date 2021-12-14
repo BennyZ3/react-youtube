@@ -6,5 +6,6 @@
   margin: 10px;
 }
 
-.ResultVideo .link {
+.vid {
+  width: 100%;
 }

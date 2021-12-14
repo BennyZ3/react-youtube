@@ -5,3 +5,6 @@
 .Favorite .ResultVideo {
   margin: auto;
 }
+details summary {
+  color: white;
+}
