@@ -13,7 +13,6 @@
   color: #ffffff;
   font-family: Arial;
   width: 60%;
-  margin-left: 5%;
 }
 
 .title {
@@ -48,4 +47,7 @@
 .videoPage details {
   height: 160vh;
   overflow-y: scroll;
+}
+.Video-container iframe {
+  margin: 0px auto;
 }

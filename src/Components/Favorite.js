@@ -1,5 +1,6 @@
-import "./Result.css";
-import ResultVideo from "./ResultVideo";
+import './Result.css';
+import ResultVideo from './ResultVideo';
+import './Favorite.css';
 
 let favorites = null;
 
@@ -21,7 +22,7 @@ const Favorite = (props) => {
       <summary>
         <strong>Favorite Videos</strong>
       </summary>
-      {favorites ? favorites : "No Videos Saved"}
+      {favorites ? favorites : 'No Videos Saved'}
     </details>
   );
 };

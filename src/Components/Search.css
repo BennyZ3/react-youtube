@@ -3,7 +3,8 @@
   box-sizing: border-box;
 }
 
-.Search a {
+.Search a,
+.Search a:hover {
   margin: 0px;
 }
 

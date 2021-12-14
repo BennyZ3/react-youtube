@@ -1,7 +1,7 @@
-import { useState } from "react";
-import ReactPlayer from "react-player";
-import { Link } from "react-router-dom";
-import "./ResultVideo.css";
+import { useState } from 'react';
+import ReactPlayer from 'react-player';
+import { Link } from 'react-router-dom';
+import './ResultVideo.css';
 
 const ResultVideo = (props) => {
   const [play, setPlay] = useState(false);
@@ -13,13 +13,13 @@ const ResultVideo = (props) => {
         onMouseEnter={() => setPlay(true)}
         onMouseLeave={() => setPlay(false)}
         modestbranding="0"
-        url={"https://youtube.com/embed/" + props.vid.id.videoId}
+        url={'https://youtube.com/embed/' + props.vid.id.videoId}
         playing={play}
         showinfo="0"
         volume="0"
         frameborder="0"
-        width="320px"
-        height="200px"
+        width="80%"
+        height="45%"
       />
 
       <div className="link">
