@@ -8,8 +8,20 @@ import PopularVideo from "./Components/PopularVideos";
 import { useState } from "react";
 import Favorite from "./Components/Favorite";
 
+function useLocalState(key, defaultValue) {
+  const storedValue = localStorage.getItem(key);
+  const [local, setLocal] = useState(storedValue ? JSON.parse(storedValue) : defaultValue);
+  function storeState(newItem) {
+    localStorage.setItem(key, JSON.stringify(newItem));
+    setLocal(newItem);
+  }
+  return [local, storeState];
+}
+
 const App = () => {
-  const [fav, setFav] = useState("");
+  // const [fav, setFav] = useState("");
+
+  const [fav, setFav] = useLocalState("fav", []);
 
   const handleFav = (video) => {
     setFav([...fav, video]);
@@ -21,8 +33,6 @@ const App = () => {
     );
     setFav(remainder);
   };
-
-  console.log(fav);
 
   return (
     <div className="App">
