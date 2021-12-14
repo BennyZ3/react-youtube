@@ -5,7 +5,7 @@ let favorites = null;
 
 const Favorite = (props) => {
   console.log(props.fav);
-  if (props.fav.length > 0) {
+  if (props.fav) {
     favorites = props.fav.map((video) => (
       <div className="favVid">
         <button className="favButton" onClick={() => props.handleDelete(video)}>
