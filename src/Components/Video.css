@@ -37,3 +37,15 @@
   background-color: #181818;
   font-family: Arial;
 }
+
+.videoPage {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+.videoPage .Video {
+  width: 90%;
+}
+.videoPage details {
+  height: 160vh;
+  overflow-y: scroll;
+}
