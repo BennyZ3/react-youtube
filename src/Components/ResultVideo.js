@@ -18,8 +18,8 @@ const ResultVideo = (props) => {
         showinfo="0"
         volume="0"
         frameborder="0"
-        width="80%"
-        height="45%"
+        width="fit-content"
+        height="fit-content"
       />
 
       <div className="link">

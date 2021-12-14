@@ -36,6 +36,7 @@ h3 {
   width: 100%;
   grid-gap: 20px 10px;
   box-sizing: border-box;
+  height: 100%;
 }
 
 .button,
@@ -52,9 +53,11 @@ h3 {
 }
 
 .favVid {
-  height: auto;
-  width: 100%;
+  object-fit: contain;
   margin-top: 20px;
+}
+.favVid .player {
+  height: 1000px;
 }
 
 .favButton {
@@ -63,7 +66,7 @@ h3 {
 
 .body {
   display: grid;
-  grid-template-columns: 8fr 240px;
+  grid-template-columns: 8fr 340px;
 }
 
 @media (max-width: 1000px) {

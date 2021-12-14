@@ -7,5 +7,10 @@
 }
 
 .vid {
-  width: 100%;
+  object-fit: scale-down;
+}
+
+.vid .player {
+  width: 1000px;
+  height: 10000px;
 }
